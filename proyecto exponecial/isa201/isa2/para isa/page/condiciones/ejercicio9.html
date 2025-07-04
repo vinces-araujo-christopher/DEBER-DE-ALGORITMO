@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calcular Total</title>
+  <link rel="stylesheet" href="../../CSS/estiloglobal.css" />
+</head>
+<body>
+  <h2>Calcula el total a pagar</h2>
+  <input type="text" id="tipo" placeholder="Tipo de cliente (Normal/VIP)" />
+  <input type="number" step="0.01" id="gasto" placeholder="Monto del gasto" />
+  <button onclick="calcularTotal()">Calcular</button>
+  <button onclick="limpiarCampos()">Limpiar</button>
+  <p id="resultado"></p>
+
+  <div class="botones">
+    <a class="boton" href="../../condiciones.html">REGRESAR</a>
+  </div>
+
+  <script src="../../js/condiciones.js"></script>
+</body>
+</html>

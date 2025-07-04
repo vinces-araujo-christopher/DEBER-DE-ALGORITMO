@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+
+    <div class="box">
+      <div class="square" style="--i:0;"></div>
+      <div class="square" style="--i:1;"></div>
+      <div class="square" style="--i:2;"></div>
+      <div class="square" style="--i:3;"></div>
+      <div class="square" style="--i:4;"></div>
+    </div>
+
+    <div class="container">
+      <form id="registro-form" class="form" onsubmit="event.preventDefault(); procesarRegistro();">
+        <h2>Registro</h2>
+        <div class="inputBox">
+          <label for="username" style="display:none;">Nombre de usuario</label>
+          <input type="text" id="username" name="username" placeholder="Nombre de usuario" required oninput="limpiarErroresRegistro()" />
+        </div>
+        <div class="inputBox">
+          <label for="password" style="display:none;">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Contraseña" required oninput="limpiarErroresRegistro()" />
+        </div>
+        <div class="inputBox">
+          <label for="confirm-password" style="display:none;">Confirmar contraseña</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required oninput="limpiarErroresRegistro()" />
+        </div>
+        <p id="error-message" class="forget"></p>
+        <button type="submit">Registrarse</button>
+        <a href="login.html" class="forget" style="display:block; text-align:center; margin-top:15px; cursor:pointer; color:#fff; text-decoration:underline;">Volver al inicio de sesión</a>
+      </form>
+    </div>
+  </section>
+  <script src="login.js"></script>
+</body>
+</html>

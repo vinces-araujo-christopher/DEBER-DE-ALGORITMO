@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f6f9f1, #dff1ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Inputs y Botones */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #d60141;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0040ff;
+}
+
+/* Resultado de los ejercicios */
+#resultado {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  max-width: 400px;
+  color: #2c5045;
+  font-weight: 500;
+}
+
+/* Listas */
+ul, ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* Sección de navegación / botones */
+.botones {
+  margin-top: 25px;
+}
+
+.boton {
+  text-decoration: none;
+  background-color: #35ffa1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.boton:hover {
+  background-color: #e12d8d;
+}
+
+/* Responsivo */
+@media screen and (max-width: 500px) {
+  input,
+  button {
+    width: 90%;
+  }
+
+  #resultado {
+    width: 90%;
+  }
+}

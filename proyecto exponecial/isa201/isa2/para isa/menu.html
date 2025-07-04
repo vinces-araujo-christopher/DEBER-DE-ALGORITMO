@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica 1B1-3</title>
+    <link rel="stylesheet" href="./css/estilo3.css">
+    <style>
+      /* Botón cerrar sesión */
+      .cerrar-sesion-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 8px 15px;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+      .cerrar-sesion-btn:hover {
+        background-color: #e60000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BIENVENIDO MASTER DANIEL VERA</h1>
+      <button class="cerrar-sesion-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+    <main>
+      <section class="container">
+        <a class="boton" href="condiciones.html">
+          <span>Condiciones</span>
+          <div class="liquid"></div>
+        </a>
+        <a class="boton" href="ciclos.html">
+          <span>Ciclos</span>
+          <div class="liquid"></div>
+        </a>
+        <a class="boton" href="cadenas.html">
+          <span>Cadenas</span>
+          <div class="liquid"></div>
+        </a>
+        <a class="boton" href="arreglos.html">
+          <span>Arreglos</span>
+          <div class="liquid"></div>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <h6>Todos los derechos reservados - Lizzy</h6>
+    </footer>
+
+    <script src="login.js"></script>
+    <script>
+      // Si no hay usuario logueado, redirigir
+      const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+      if (!usuario) {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

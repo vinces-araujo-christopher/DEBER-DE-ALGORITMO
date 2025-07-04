@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body onload="mostrarUsuarioLogueado()">
+  <section>
+    <!-- Colores difuminados para fondo -->
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+
+    <!-- Cuadrados animados -->
+    <div class="box">
+      <div class="square" style="--i:0;"></div>
+      <div class="square" style="--i:1;"></div>
+      <div class="square" style="--i:2;"></div>
+      <div class="square" style="--i:3;"></div>
+      <div class="square" style="--i:4;"></div>
+    </div>
+
+    <div class="container">
+      <form id="loginForm" class="form" onsubmit="event.preventDefault(); procesarLogin();">
+        <h2>Iniciar Sesión</h2>
+        <div class="inputBox">
+          <label for="username" style="display:none;">Usuario</label>
+          <input type="text" id="username" name="username" placeholder="Usuario" required oninput="limpiarErroresLogin()" />
+        </div>
+        <div class="inputBox">
+          <label for="password" style="display:none;">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Contraseña" required oninput="limpiarErroresLogin()" />
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+        <p id="errorMessage" class="forget"></p>
+        <button type="button" onclick="irARegistro()" style="width:100%; margin-top:10px; border:none; background:none; color:#fff; cursor:pointer; text-decoration:underline;">Registrarse</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="login.js"></script>
+</body>
+</html>
